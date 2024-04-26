@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Cox Bazar",
+      "country": "Bangladesh",
+      "details": "Relaxing on the pristine beaches of Cox's Bazar was a highlight of my trip to Bangladesh. The endless stretch of golden sand and clear blue waters was breathtaking.",
+      "area": "1,47,570 sqkm",
+      "season": "Winter",
+      "location": "Bangladesh",
+      "Visitors": "120k" ,
+      "image": "https://i.ibb.co/zZR9Ljt/hammock-with-beautiful-nature-tropical-beach.jpg"
+      
+    },
+    {
+        "id": 2,
+        "estate_title": "Bangkok",
+        "country": "Thailand",
+        "details": "The vibrant street life, bustling markets, and magnificent temples of Bangkok offer an unforgettable cultural experience.",
+        "area": "10,47,570 sqkm",
+        "season": "Summer",
+        "location": "Bangladesh",
+        "Visitors": "220k" ,
+        "image": "https://i.ibb.co/ZB1N4jL/singapore-cityscape-twilight.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Bali",
+        "country": "Indonesia",
+        "details": "Bali's lush rice terraces, ancient temples, and vibrant culture make it a paradise for travelers. Ubud's artistic charm and the stunning beaches of Uluwatu are not to be missed.",
+        "area": "47,570 sqkm",
+        "season": "Spring",
+        "location": "Bangladesh",
+        "Visitors": "720k" ,
+        "image": "https://i.ibb.co/WyHQQVJ/wooden-bridge-koh-nangyuan-island-surat-thani-thailand.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Penang",
+        "country": "Malaysia",
+        "details": "Exploring the historic streets of George Town and indulging in Penang's diverse culinary delights made for an unforgettable trip.",
+        "area": "4,47,570 sqkm",
+        "season": "Spring",
+        "location": "Bangladesh",
+        "Visitors": "20k" ,
+        "image": "https://i.ibb.co/T8dX4hn/beautiful-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Hanoi",
+        "country": "Vietnam",
+        "details": "Hanoi's charming Old Quarter, vibrant markets, and delicious street food made it a highlight of my trip to Vietnam. Don't miss the serene beauty of Hoan Kiem Lake.",
+        "area": "57,570 sqkm",
+        "season": "Winter",
+        "location": "Bangladesh",
+        "Visitors": "30k" ,
+        "image": "https://i.ibb.co/TYKQFtX/aerial-shot-clear-blue-sea-with-boat-forested-shore-beach-side.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Marina City",
+        "country": "Singapore",
+        "details": " The iconic Marina Bay Sands hotel and the stunning views from the rooftop infinity pool are worth every penny. The futuristic architecture and vibrant city life make Singapore a must-visit destination.",
+        "area": "4,07,570 sqkm",
+        "season": "Winter",
+        "location": "Bangladesh",
+        "Visitors": "220k" ,
+        "image":"https://i.ibb.co/LkhXLNz/merlion-statue-cityscape-singapore.jpg" 
+    }
+  ]
