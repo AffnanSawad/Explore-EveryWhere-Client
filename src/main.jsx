@@ -16,6 +16,7 @@ import Login from './Components/Root/login/Login.jsx';
 import Register from './Components/Root/register/Register.jsx';
 import AuthProvider from './Components/Root/Providers/AuthProvider.jsx';
 import AddCard from './Components/Root/AddCard/AddCard.jsx';
+import Stat from './Components/Root/Stat/Stat.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,10 +45,15 @@ const router = createBrowserRouter([
       element:<Register></Register>
     },
     {
+      path:'/stat',
+      element: <Stat></Stat>
+    },
+    {
       path: '/add',
       element: <AddCard> </AddCard>,
       loader: ()=>fetch('http://localhost:5000/add')
     }
+    
     
 
 
