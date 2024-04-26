@@ -19,6 +19,8 @@ import AddCard from './Components/Root/AddCard/AddCard.jsx';
 import Stat from './Components/Root/Stat/Stat.jsx';
 import MySpot from './Components/Root/MySpot/MySpot.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
+import AddMyCard from './Components/Root/AddMycard/AddMyCard.jsx';
+import Addmyspot from './Components/Root/Addmyspot/Addmyspot.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,7 +55,7 @@ const router = createBrowserRouter([
       element: <Stat></Stat>
     },
     {
-      path: '/add',
+      path: '/data',
       element: <AddCard> </AddCard>,
       //loader: ()=>fetch('http://localhost:5000/add')
     },
@@ -68,7 +70,19 @@ const router = createBrowserRouter([
       element: 
          <CardDetails></CardDetails>,
       loader: ()=> fetch('../public/data.json')
-     }
+     },
+
+     {
+      path: '/addmyspot',
+      element: <AddMyCard></AddMyCard>,
+      //loader: ()=>fetch('http://localhost:5000/user')
+    },
+
+    {
+      path: '/my',
+      element: <Addmyspot> </Addmyspot>,
+      loader: ()=>fetch('http://localhost:5000/user')
+    },
     
     
 
