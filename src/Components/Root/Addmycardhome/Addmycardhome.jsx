@@ -1,15 +1,39 @@
 
+
 const Addmycardhome = ({card}) => {
 
-    const {name,country_name,city,population,Area,season,cost,time,visitors,email,username,details,photourl} = card; 
+    const {_id,name,country_name,city,population,Area,season,cost,time,visitors,email,username,details,photourl} = card; 
 
 
-    
+
+
+    const handledeleted = _id => {
+
+        console.log('deleted', _id)
+
+        fetch(`http://localhost:5000/user/${_id}`,{
+            method: 'DELETE'
+
+        })
+        .then(res => res.json())
+        .then(data => {
+         
+         console.log(data)
+
+         if(data.deletedCount>0){
+ 
+        alert('Are you Want to Delete?')
+ 
+        }
+
+
+    })
+        
 
 
 
      
-
+    }
     
     
     return (
@@ -50,7 +74,7 @@ const Addmycardhome = ({card}) => {
             <button className="btn btn-error"
              
 
-            //onClick={() => handledelete(_id) }
+            onClick={() => handledeleted(_id) }
             
             
             

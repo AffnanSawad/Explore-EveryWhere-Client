@@ -40,13 +40,23 @@ const AddMyCard = () => {
 
   })
   .then(res => res.json())
- .then(data => console.log(data)   );
+ .then(data => { console.log(data)  
+
+  if(data.insertedCount > 0){
+     
+
+alert('added');
+    
+    
+  }
+
+}   )
 
     
 
  
 form.reset();
-}
+    }
 
 
     
