@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
         <div className="overflow-x-auto  ">
+        
+        <Helmet>
+          <title>Explore-EveryWhere | Contact-Us</title>
+        </Helmet>
 
-          <title> CONTACT</title>
       <table className="table table-zebra max-w-7xl mx-auto  text-center mt-20 mb-20">
         {/* head */}
         <thead>

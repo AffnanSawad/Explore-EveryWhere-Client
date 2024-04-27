@@ -21,8 +21,9 @@ import MySpot from './Components/Root/MySpot/MySpot.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
 import AddMyCard from './Components/Root/AddMycard/AddMyCard.jsx';
 import Addmyspot from './Components/Root/Addmyspot/Addmyspot.jsx';
-import Update from './Components/Root/Update/Update.jsx';
 import Updatedform from './Components/Root/Updatedform/Updatedform.jsx';
+import PrivateRoute from './Components/Root/PrivateRoute/PrivateRoute.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
@@ -42,7 +43,14 @@ const router = createBrowserRouter([
     },
     {
       path:'/contact',
-       element: <Contact></Contact> 
+       element: 
+       
+       <PrivateRoute>
+
+<Contact></Contact> 
+
+       </PrivateRoute>
+       
     },
     {
       path:'/login',
@@ -54,7 +62,9 @@ const router = createBrowserRouter([
     },
     {
       path:'/stat',
-      element: <Stat></Stat>
+      element: <PrivateRoute>
+        <Stat></Stat>
+      </PrivateRoute>
     },
     {
       path: '/data',
@@ -63,31 +73,59 @@ const router = createBrowserRouter([
     },
     {
       path: '/all',
-      element: <MySpot></MySpot>,
+      element:
+              <MySpot></MySpot>,
+
+      
       loader: ()=>fetch('http://localhost:5000/add')
     },
 
     {
       path: '/card/:id',
-      element: 
-         <CardDetails></CardDetails>,
+      element: <PrivateRoute>
+
+      <CardDetails></CardDetails>
+
+      </PrivateRoute>,
+          
       loader: ()=> fetch('../public/data.json')
      },
 
      {
       path: '/addmyspot',
-      element: <AddMyCard></AddMyCard>,
+      element: 
+      
+      <PrivateRoute>
+
+<AddMyCard></AddMyCard>,
+
+      </PrivateRoute>
+      
       //loader: ()=>fetch('http://localhost:5000/user')
     },
 
     {
       path: '/my',
-      element: <Addmyspot> </Addmyspot>,
+      element:
+      
+      <PrivateRoute>
+          <Addmyspot> </Addmyspot>,
+
+
+      </PrivateRoute>,
       loader: ()=>fetch('http://localhost:5000/user')
     },
     {
       path: "/updateform/:id",
-      element:   <Updatedform></Updatedform>,
+      element:  
+      
+      <PrivateRoute>
+     
+     
+      <Updatedform></Updatedform>,
+
+
+      </PrivateRoute>,
       loader: ({params}) => fetch(`http://localhost:5000/user/${params.id}`)
     },
     
@@ -106,9 +144,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 <AuthProvider>
       
-      
-      
+      <HelmetProvider>
+
       <RouterProvider router={router} />
+
+
+
+      </HelmetProvider>
+      
 
       
       

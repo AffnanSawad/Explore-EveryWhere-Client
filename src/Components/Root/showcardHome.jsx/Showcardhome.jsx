@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 
 const Showcardhome = ({card}) => {
 
@@ -7,6 +8,11 @@ const Showcardhome = ({card}) => {
     
     return (
         <div className="card w-96 bg-base-100 shadow-xl my-10">
+      <Helmet>
+          <title> Explore-EveryWhere | All Tourists Spot  </title>
+        </Helmet>
+
+
         <figure><img src={ photourl } alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{name}</h2>

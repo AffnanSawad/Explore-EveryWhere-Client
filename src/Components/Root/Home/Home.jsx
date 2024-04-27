@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import Cards from "../Cards1/Cards";
 import Logo from "../Logo/Logo";
@@ -13,6 +14,11 @@ const Home = () => {
         <div>
            
     <div className="max-w-7xl  mx-auto mb-4">
+
+
+    <Helmet>
+          <title> Explore-EveryWhere | Home  </title>
+        </Helmet>
 
         <Update></Update>
 

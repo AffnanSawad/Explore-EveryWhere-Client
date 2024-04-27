@@ -1,7 +1,8 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
-const Addmycardhome = ({card}) => {
+const Addmycardhome = ({card,cardes,setcades}) => {
 
     const {_id,name,country_name,city,population,Area,season,cost,time,visitors,email,username,details,photourl} = card; 
 
@@ -23,7 +24,10 @@ const Addmycardhome = ({card}) => {
 
          if(data.deletedCount>0){
  
-        alert('Are you Want to Delete?')
+        alert('Do you Want to Delete?')
+
+        const remaining = cardes.filter(cof => cof._id !== _id );
+        setcades(remaining);
  
         }
 
@@ -39,6 +43,10 @@ const Addmycardhome = ({card}) => {
     
     return (
         <div className="card w-96 bg-base-100 shadow-xl my-10">
+
+<Helmet>
+      <title>Explore-EveryWhere | My-Spot</title>
+    </Helmet>
         <figure><img src={ photourl } alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{name}</h2>

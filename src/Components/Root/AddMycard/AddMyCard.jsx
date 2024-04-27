@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 
 const AddMyCard = () => {
 
@@ -42,13 +43,14 @@ const AddMyCard = () => {
   .then(res => res.json())
  .then(data => { console.log(data)  
 
-  if(data.insertedCount > 0){
+  if(data.insertedId > 0)
+  {
      
 
-alert('added');
+     alert('added');
     
     
-  }
+ }
 
 }   )
 
@@ -70,7 +72,10 @@ form.reset();
 
         
         <div className="card shrink-0 w-full max-w-7xl mx-auto shadow-2xl bg-red-100 ">
-
+        
+        <Helmet>
+      <title>Explore-EveryWhere | Add-My-Spot</title>
+    </Helmet>
         <h1 className="text-center text-2xl font-extrabold"> ADD Tourist Spot </h1>
 
   <form className="card-body"  onSubmit={handleaddcard}>

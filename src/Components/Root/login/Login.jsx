@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -54,7 +55,9 @@ const Login = () => {
     return (
         <div className="hero min-h-screen bg-blue-200">
         
-          <title>LOG IN </title>
+        <Helmet>
+          <title> Explore-EveryWhere | Log-In  </title>
+        </Helmet>
 
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

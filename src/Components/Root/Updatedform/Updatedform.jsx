@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const Updatedform = () => {
@@ -6,10 +7,17 @@ const Updatedform = () => {
   const form = useLoaderData();
 
   const {_id,name,country_name,city,population,Area,season,cost,time,visitors,email,username,details,photourl} = form ;
-
+  
+  
+ 
 
    
   const handleupdateform = event => {
+
+
+  
+
+
     event.preventDefault()
 
     const form = event.target 
@@ -50,13 +58,14 @@ if(data.modifiedCount > 0){
   
     alert('Do You Want To Update ?')
 
+
 }
 
-  form.reset();
 
 });
 
 
+form.reset();
 
 
 }
@@ -64,6 +73,13 @@ if(data.modifiedCount > 0){
 
     return (
         <div>
+
+        
+<Helmet>
+          <title> Explore-EveryWhere | Update-Form  </title>
+        </Helmet>
+
+
 <div >
         
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-red-100 ">
@@ -157,7 +173,7 @@ if(data.modifiedCount > 0){
 
 
     <div className="form-control mt-6">
-      <button  className="btn btn-secondary">UPDATE </button>
+      <button   className="btn btn-secondary">UPDATE </button>
     </div>
   </form>
 </div>

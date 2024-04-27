@@ -3,6 +3,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -87,8 +88,9 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-green-200  ">
 
-      
-          <title> REGISTER  </title>
+<Helmet>
+          <title> Explore-EveryWhere | Register  </title>
+        </Helmet>
 
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import {useLoaderData,useParams} from 'react-router-dom'
 
 
@@ -19,7 +20,9 @@ const CardDetails = () => {
       
         <div className='grid grid-cols-4  mt-20 mb-20'>
 
-
+<Helmet>
+      <title>Explore-EveryWhere | Spot-Details</title>
+    </Helmet>
 
     <div className='grid col-span-3'>
 

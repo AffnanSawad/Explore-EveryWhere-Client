@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -58,9 +59,11 @@ const TriangleBar = (props) => {
 const Stat = () => {
     return (
 
-       
+      
         
         <BarChart
+
+     
         width={1200}
         height={600}
         data={data}
@@ -71,6 +74,7 @@ const Stat = () => {
           bottom: 5,
         }}
       >
+       
 
         <CartesianGrid strokeDasharray="3 3" />
 
