@@ -21,6 +21,8 @@ import MySpot from './Components/Root/MySpot/MySpot.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
 import AddMyCard from './Components/Root/AddMycard/AddMyCard.jsx';
 import Addmyspot from './Components/Root/Addmyspot/Addmyspot.jsx';
+import Update from './Components/Root/Update/Update.jsx';
+import Updatedform from './Components/Root/Updatedform/Updatedform.jsx';
 
 
 const router = createBrowserRouter([
@@ -82,6 +84,11 @@ const router = createBrowserRouter([
       path: '/my',
       element: <Addmyspot> </Addmyspot>,
       loader: ()=>fetch('http://localhost:5000/user')
+    },
+    {
+      path: "/updateform/:id",
+      element:   <Updatedform></Updatedform>,
+      loader: ({params}) => fetch(`http://localhost:5000/user/${params.id}`)
     },
     
     

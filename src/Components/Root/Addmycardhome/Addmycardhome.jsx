@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Addmycardhome = ({card}) => {
@@ -70,8 +71,12 @@ const Addmycardhome = ({card}) => {
 
           <div className="card-actions flex gap-5 ">
             <button className="btn btn-primary">View Details</button>
-            <button className="btn btn-secondary">Update</button>
-            <button className="btn btn-error"
+            <Link to={`/updateform/${_id}`}>
+
+<button className="btn join-item btn-error     ">EDIT</button>
+
+
+</Link>              <button className="btn btn-error"
              
 
             onClick={() => handledeleted(_id) }
