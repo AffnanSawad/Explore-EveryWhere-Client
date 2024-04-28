@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Addmycardhome = ({card,cardes,setcades}) => {
@@ -24,8 +25,17 @@ const Addmycardhome = ({card,cardes,setcades}) => {
 
          if(data.deletedCount>0){
  
-        alert('Do you Want to Delete?')
+          {
+     
 
+            Swal.fire({
+              title: 'Delete!',
+              text: 'User Deleted Successfully ! ',
+              icon: 'success',
+              confirmButtonText: 'Okay ! '
+            })
+
+          }
         const remaining = cardes.filter(cof => cof._id !== _id );
         setcades(remaining);
  

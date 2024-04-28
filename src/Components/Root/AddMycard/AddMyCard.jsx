@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Swal from 'sweetalert2'
 
 const AddMyCard = () => {
 
@@ -43,12 +44,16 @@ const AddMyCard = () => {
   .then(res => res.json())
  .then(data => { console.log(data)  
 
-  if(data.insertedId > 0)
+  if(data.insertedId)
   {
      
 
-     alert('added');
-    
+    Swal.fire({
+      title: 'Add!',
+      text: 'User added Successfully ! ',
+      icon: 'success',
+      confirmButtonText: 'Okay ! '
+    })    
     
  }
 

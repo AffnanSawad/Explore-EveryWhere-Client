@@ -91,6 +91,16 @@ const router = createBrowserRouter([
       loader: ()=> fetch('../public/data.json')
      },
 
+
+     
+
+
+
+
+
+
+
+
      {
       path: '/addmyspot',
       element: 

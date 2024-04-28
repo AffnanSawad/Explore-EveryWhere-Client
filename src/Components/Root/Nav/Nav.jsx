@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
@@ -6,10 +6,28 @@ const Nav = () => {
 
    const [theme ,settheme] = useState('light')
 
+   useEffect(  ()=>{
+
+  localStorage.setItem('theme',theme)
+
+  const localtheme = localStorage.getItem('theme')
+
+  document.querySelector('html').setAttribute('data-theme',localtheme)
+
+
+   }   ,
+  
+   [theme]
+  
+  
+  )
+
    
    const handletoggle = (e) => {
+
+    console.log(e.target.checked)
    
-  if(e.target.value){
+  if(e.target.checked){
     
     settheme('synthwave')
  
@@ -22,7 +40,7 @@ const Nav = () => {
 
    }
 
-
+  console.log(theme)
 
  
 

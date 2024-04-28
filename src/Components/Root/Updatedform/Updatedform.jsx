@@ -1,12 +1,13 @@
 
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Updatedform = () => {
 
   const form = useLoaderData();
 
-  const {_id,name,country_name,city,population,Area,season,cost,time,visitors,email,username,details,photourl} = form ;
+  const {_id,name,country_name,population,Area,city,email,username,details,photourl} = form ;
   
   
  
@@ -27,13 +28,13 @@ const Updatedform = () => {
     const city = form.city.value
     const population = form.population.value
     const Area = form.Area.value
-    const season = form.name.value
+   // const season = form.name.value
    // const email = form.email.value
     //const username = form.username.value
     const photourl = form.photourl.value
     
 
-    const updatedform = {name,country_name,city,population,Area, season,email,username,details,photourl}
+    const updatedform = {name,country_name,population,Area,email,username,details,photourl,city}
 
     console.log(updatedform);
 
@@ -56,8 +57,12 @@ body: JSON.stringify(updatedform)
 
 if(data.modifiedCount > 0){
   
-    alert('Do You Want To Update ?')
-
+  Swal.fire({
+    title: 'Updated!',
+    text: 'User Updated Successfully ! ',
+    icon: 'success',
+    confirmButtonText: 'Okay ! '
+  })
 
 }
 
@@ -130,20 +135,6 @@ form.reset();
       <input type="text" name="Area" defaultValue={Area} placeholder="Area" className="input input-bordered" required />
       
     </div>
-
-
-
-
-
-
-    <div className="form-control ">
-      <label className="label">
-        <span className="label-text">Season</span>
-      </label>
-      <input type="text" name="season" defaultValue={season} placeholder="season" className="input input-bordered" required />
-      
-    </div>
-
 
 
 
