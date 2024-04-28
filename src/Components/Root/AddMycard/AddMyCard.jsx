@@ -30,7 +30,7 @@ const AddMyCard = () => {
 
 
 
-        fetch('http://localhost:5000/user ',{
+        fetch('https://explore-everywhere.vercel.app/user ',{
       
       
     method: 'POST',

@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       path:'/',
       element: <Home> </Home> ,
 
-     // loader: () => fetch('http://localhost:5000/add')
+     // loader: () => fetch('https://explore-everywhere.vercel.app/add')
     },
     {
       path:'/contact',
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
     {
       path: '/data',
       element: <AddCard> </AddCard>,
-      //loader: ()=>fetch('http://localhost:5000/add')
+      //loader: ()=>fetch('https://explore-everywhere.vercel.app/add')
     },
     {
       path: '/all',
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
               <MySpot></MySpot>,
 
       
-      loader: ()=>fetch('http://localhost:5000/add')
+      loader: ()=>fetch('https://explore-everywhere.vercel.app/add')
     },
 
     {
@@ -111,7 +111,7 @@ const router = createBrowserRouter([
 
       </PrivateRoute>
       
-      //loader: ()=>fetch('http://localhost:5000/user')
+      //loader: ()=>fetch('https://explore-everywhere.vercel.app/user')
     },
 
     {
@@ -123,7 +123,7 @@ const router = createBrowserRouter([
 
 
       </PrivateRoute>,
-      loader: ()=>fetch('http://localhost:5000/user')
+      loader: ()=>fetch('https://explore-everywhere.vercel.app/user')
     },
     {
       path: "/updateform/:id",
@@ -136,7 +136,7 @@ const router = createBrowserRouter([
 
 
       </PrivateRoute>,
-      loader: ({params}) => fetch(`http://localhost:5000/user/${params.id}`)
+      loader: ({params}) => fetch(`https://explore-everywhere.vercel.app/user/${params.id}`)
     },
     
     

@@ -14,7 +14,7 @@ const Addmycardhome = ({card,cardes,setcades}) => {
 
         console.log('deleted', _id)
 
-        fetch(`http://localhost:5000/user/${_id}`,{
+        fetch(`https://explore-everywhere.vercel.app/user/${_id}`,{
             method: 'DELETE'
 
         })
@@ -88,10 +88,9 @@ const Addmycardhome = ({card,cardes,setcades}) => {
 
 
           <div className="card-actions flex gap-5 ">
-            <button className="btn btn-primary">View Details</button>
             <Link to={`/updateform/${_id}`}>
 
-<button className="btn join-item btn-error     ">EDIT</button>
+<button className="btn join-item btn-secondary     ">EDIT</button>
 
 
 </Link>              <button className="btn btn-error"

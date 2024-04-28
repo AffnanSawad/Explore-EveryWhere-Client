@@ -41,7 +41,7 @@ const Updatedform = () => {
 
     // CLIENT STITE THEKE DATA => SERVER SITE E PATHANO....
 
-fetch(`http://localhost:5000/user/${_id} `,{
+fetch(`https://explore-everywhere.vercel.app/user/${_id} `,{
   
   
 method: 'PUT',
